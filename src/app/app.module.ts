@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+// import { ScrollingModule } from '@angular/cdk/scrolling';
 import { AppComponent } from './app.component';
 import { ThreegridComponent } from './components/threegrid/threegrid.component';
 
@@ -9,11 +9,17 @@ import {MatNativeDateModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {DemoMaterialModule} from './../material-module';
 import {HttpClientModule} from '@angular/common/http';
+import { CardExampleComponent } from './components/card-example/card-example.component';
+import { EmployeeDetailsServiceService } from './employee-details-service.service';
+import { NewFormComponent } from './components/new-form/new-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ThreegridComponent
+    ThreegridComponent,
+    CardExampleComponent,
+    NewFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -23,8 +29,9 @@ import {HttpClientModule} from '@angular/common/http';
     DemoMaterialModule,
     MatNativeDateModule,
     ReactiveFormsModule,
+    // ScrollingModule,
   ],
-  providers: [],
+  providers: [EmployeeDetailsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

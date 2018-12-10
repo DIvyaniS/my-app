@@ -1,0 +1,30 @@
+
+  <!-- <form [formGroup]="form" (submit)="submit(form.value)">
+    <div *ngFor="let skill of skills.controls; let i=index">
+      <input type="checkbox" [formControl]="skill"/>{{user.skills[i].name}}
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  
+  {{ form.value | json }} -->
+  <!-- <form [formGroup]="form" (submit)="submit(form.value)">
+    <div *ngFor="let emp of employees.controls; let i=index">
+      <input type="checkbox" [formControl]="emp"/>{{employees[i].userId}}
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  
+  {{ form.value | json }} -->
+  <form [formGroup]="formGroup" (submit)="submit(form.value)">
+  <div formArrayName="roster">
+    <div [formGroupName]="i" *ngFor="let control of formGroup.get('roster').controls; index as i">
+
+
+    <input type="checkbox" formControlName="id" [checked]="selected" (change)="selected = $event.target.checked">{{employees[0].userId}}
+    <!-- <input type="checkbox" [checked]="isAvailable2" (change)="isAvailable2 = $event.target.checked">{{employees[1].userId}} -->
+    <!-- <pre>{{ isAvailable | json }}</pre> -->
+    <button type="submit">Submit</button>
+  </div>
+  </div>
+</form>
+{{ formGroup.value | json }}

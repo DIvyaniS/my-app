@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let shoe of employees">
+      {{shoe.userId}}
+    </mat-list-option>
+  </mat-selection-list>
+</mat-card>
+<mat-card>
+  <mat-selection-list #shoes>
+    <mat-list-option *ngFor="let shoe of employees">
+      {{shoe.userId}}
+    </mat-list-option>
+  </mat-selection-list>
+</mat-card>
+<!-- <ul >
+  <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="90" >
+    <ng-container *cdkVirtualFor="let item of employees">
+      <li> {{item.userId}} </li>
+    </ng-container>
+  </cdk-virtual-scroll-viewport>
+</ul> -->
+<!-- <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="4" >
+  <ng-container *cdkVirtualFor="let item of employees">
+    <li> {{item.userId}} </li>
+  </ng-container>
+</cdk-virtual-scroll-viewport> -->
+  <!--<mat-card>
+</mat-card> -->
