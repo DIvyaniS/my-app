@@ -1,17 +1,17 @@
 <mat-card>
-  <mat-selection-list #shoes>
+  <mat-selection-list #shoes [(ngModel)]="selectedOptions" (ngModelChange)="onNgModelChange($event)">
     <mat-list-option *ngFor="let shoe of employees">
       {{shoe.userId}}
     </mat-list-option>
   </mat-selection-list>
 </mat-card>
-<mat-card>
+<!-- <mat-card>
   <mat-selection-list #shoes>
     <mat-list-option *ngFor="let shoe of employees">
       {{shoe.userId}}
     </mat-list-option>
   </mat-selection-list>
-</mat-card>
+</mat-card> -->
 <!-- <ul >
   <cdk-virtual-scroll-viewport  style="height: 500px" itemSize="90" >
     <ng-container *cdkVirtualFor="let item of employees">
@@ -25,4 +25,14 @@
   </ng-container>
 </cdk-virtual-scroll-viewport> -->
   <!--<mat-card>
+</mat-card> -->
+<!-- <mat-card>
+<form [formGroup]="form" (submit)="submit(form.value)">
+  <div *ngFor="let emp of employees.controls; let i=index">
+    <input type="checkbox" [formControlName]="emp"/>{{employees[i].userId}}
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+{{ form.value | json }}
 </mat-card> -->

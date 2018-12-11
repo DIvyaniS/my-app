@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { CardExampleComponent } from './components/card-example/card-example.component';
 import { EmployeeDetailsServiceService } from './employee-details-service.service';
 import { NewFormComponent } from './components/new-form/new-form.component';
+import { BasicFormComponent } from './components/basic-form/basic-form.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { NewFormComponent } from './components/new-form/new-form.component';
     ThreegridComponent,
     CardExampleComponent,
     NewFormComponent,
+    BasicFormComponent,
     
   ],
   imports: [

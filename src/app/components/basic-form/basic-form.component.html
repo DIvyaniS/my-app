@@ -1,0 +1,20 @@
+<!-- <p>
+  basic-form works!
+  <input type="checkbox" [formControl] = "isChecked1" >isChecked1
+  <input type="checkbox" [formControl] = "isChecked2" >isChecked2
+ 
+  <button (click)="apply()">Apply</button>
+  <button (click)="reset()">Reset</button>
+</p> -->
+
+<div>
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <div *ngFor="let att of employees">
+      <input type="checkbox" [formControlName]="att.userId" >{{att.firstName}}
+    </div>
+    <div>
+      <button (click)="apply()">Apply</button>
+    </div>
+  </form>
+</div>

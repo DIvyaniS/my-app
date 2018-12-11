@@ -7,5 +7,6 @@ export interface IEmployee{
     employeeCode : String,
     region : String,
     phoneNumber : BigInteger,
-    emailAddress : String
+    emailAddress : String,
+    selected : boolean
 }
